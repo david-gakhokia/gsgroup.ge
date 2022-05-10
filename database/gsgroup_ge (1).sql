@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2022 at 10:43 AM
+-- Generation Time: May 10, 2022 at 09:10 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.24
 
@@ -234,7 +234,8 @@ INSERT INTO `exclusives` (`id`, `image`, `icon`, `status`, `created_at`, `update
 (1, NULL, 'Dolorem debitis numq', 0, '2022-05-07 08:14:18', '2022-05-07 08:14:18'),
 (2, NULL, 'Voluptatem velit ad', 0, '2022-05-07 08:40:09', '2022-05-07 08:40:09'),
 (3, NULL, 'Voluptas voluptatem', 1, '2022-05-07 08:40:21', '2022-05-07 08:40:21'),
-(4, NULL, 'Rerum in quibusdam v', 1, '2022-05-07 08:40:33', '2022-05-07 08:40:33');
+(4, NULL, 'Rerum in quibusdam v', 1, '2022-05-07 08:40:33', '2022-05-07 08:40:33'),
+(5, NULL, 'Odit ut laboriosam', 0, '2022-05-09 11:04:13', '2022-05-09 11:04:13');
 
 -- --------------------------------------------------------
 
@@ -269,7 +270,10 @@ INSERT INTO `exclusive_translations` (`id`, `exclusive_id`, `locale`, `title`, `
 (9, 3, 'ru', 'Suscipit dolorum ut', 'Wade Cantrell', 'Dolorem quia eum est', '2022-05-07 08:40:21', '2022-05-07 08:40:21'),
 (10, 4, 'en', 'Voluptas enim in aut', 'Rowan Hinton', 'Qui qui irure commod', '2022-05-07 08:40:33', '2022-05-07 08:40:33'),
 (11, 4, 'ka', 'Voluptatem Eaque se', 'Berk Houston', 'Exercitation quasi o', '2022-05-07 08:40:34', '2022-05-07 08:40:34'),
-(12, 4, 'ru', 'Nostrum officiis cor', 'Leila Grimes', 'Saepe dolor cum temp', '2022-05-07 08:40:34', '2022-05-07 08:40:34');
+(12, 4, 'ru', 'Nostrum officiis cor', 'Leila Grimes', 'Saepe dolor cum temp', '2022-05-07 08:40:34', '2022-05-07 08:40:34'),
+(13, 5, 'en', 'Aperiam duis ad labo', 'Darrel Griffith', 'Asperiores velit sin', '2022-05-09 11:04:13', '2022-05-09 11:04:13'),
+(14, 5, 'ka', 'Dolore animi proide', 'Scott Mclaughlin', 'Ea qui sit corrupti', '2022-05-09 11:04:13', '2022-05-09 11:04:13'),
+(15, 5, 'ru', 'Nihil dolor nobis ip', 'Ursula Branch', 'Et tempor maiores et', '2022-05-09 11:04:13', '2022-05-09 11:04:13');
 
 -- --------------------------------------------------------
 
@@ -1695,13 +1699,13 @@ ALTER TABLE `employee_translations`
 -- AUTO_INCREMENT for table `exclusives`
 --
 ALTER TABLE `exclusives`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `exclusive_translations`
 --
 ALTER TABLE `exclusive_translations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
