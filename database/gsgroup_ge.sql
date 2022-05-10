@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2022 at 09:10 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.24
+-- Generation Time: May 10, 2022 at 09:48 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -271,7 +271,7 @@ INSERT INTO `exclusive_translations` (`id`, `exclusive_id`, `locale`, `title`, `
 (10, 4, 'en', 'Voluptas enim in aut', 'Rowan Hinton', 'Qui qui irure commod', '2022-05-07 08:40:33', '2022-05-07 08:40:33'),
 (11, 4, 'ka', 'Voluptatem Eaque se', 'Berk Houston', 'Exercitation quasi o', '2022-05-07 08:40:34', '2022-05-07 08:40:34'),
 (12, 4, 'ru', 'Nostrum officiis cor', 'Leila Grimes', 'Saepe dolor cum temp', '2022-05-07 08:40:34', '2022-05-07 08:40:34'),
-(13, 5, 'en', 'Aperiam duis ad labo', 'Darrel Griffith', 'Asperiores velit sin', '2022-05-09 11:04:13', '2022-05-09 11:04:13'),
+(13, 5, 'en', 'Aperiam duis ad labo12', 'Darrel Griffith', 'Asperiores velit sin', '2022-05-09 11:04:13', '2022-05-10 11:19:07'),
 (14, 5, 'ka', 'Dolore animi proide', 'Scott Mclaughlin', 'Ea qui sit corrupti', '2022-05-09 11:04:13', '2022-05-09 11:04:13'),
 (15, 5, 'ru', 'Nihil dolor nobis ip', 'Ursula Branch', 'Et tempor maiores et', '2022-05-09 11:04:13', '2022-05-09 11:04:13');
 
@@ -462,7 +462,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (46, '2022_04_19_174050_create_visions_table', 15),
 (47, '2022_04_19_174458_create_vision_translations_table', 15),
 (50, '2022_04_19_170220_create_exclusives_table', 16),
-(51, '2022_04_19_170239_create_exclusive_translations_table', 16);
+(51, '2022_04_19_170239_create_exclusive_translations_table', 16),
+(52, '2022_05_10_114949_create_privacy_policies_table', 17),
+(53, '2022_05_10_115911_create_privacy_policy_translations_table', 17);
 
 -- --------------------------------------------------------
 
@@ -787,6 +789,52 @@ INSERT INTO `post_translations` (`id`, `post_id`, `locale`, `name`, `description
 (28, 12, 'en', 'We opened offices in Moscow and Warsaw', '..', '2022-03-20 09:14:25', '2022-03-20 09:14:25'),
 (29, 12, 'ka', 'We opened offices in Moscow and Warsaw', '..', '2022-03-20 09:14:25', '2022-03-20 09:14:25'),
 (30, 12, 'ru', 'Мы открыли офисы в Москве и Варшаве', '..', '2022-03-20 09:14:25', '2022-03-20 09:14:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `privacy_policies`
+--
+
+CREATE TABLE `privacy_policies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `cover` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `privacy_policies`
+--
+
+INSERT INTO `privacy_policies` (`id`, `cover`, `created_at`, `updated_at`) VALUES
+(1, NULL, '2022-05-10 11:09:42', '2022-05-10 11:09:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `privacy_policy_translations`
+--
+
+CREATE TABLE `privacy_policy_translations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `privacy_policy_id` bigint(20) UNSIGNED NOT NULL,
+  `locale` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `privacy_policy_translations`
+--
+
+INSERT INTO `privacy_policy_translations` (`id`, `privacy_policy_id`, `locale`, `title`, `name`, `description`, `created_at`, `updated_at`) VALUES
+(1, 1, 'en', 'ტესტ1', 'Zeus Goodwin', 'Enim minima a hic ea', '2022-05-10 11:09:42', '2022-05-10 11:09:53'),
+(2, 1, 'ka', 'Tempora enim ab dist', 'Illana Deleon', 'Alias qui et esse ma', '2022-05-10 11:09:42', '2022-05-10 11:09:42'),
+(3, 1, 'ru', 'Eu consectetur id', 'Whilemina Cortez', 'Magna dolore dolor e', '2022-05-10 11:09:42', '2022-05-10 11:09:42');
 
 -- --------------------------------------------------------
 
@@ -1534,6 +1582,20 @@ ALTER TABLE `post_translations`
   ADD KEY `post_translations_locale_index` (`locale`);
 
 --
+-- Indexes for table `privacy_policies`
+--
+ALTER TABLE `privacy_policies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `privacy_policy_translations`
+--
+ALTER TABLE `privacy_policy_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `privacy_policy_translations_privacy_policy_id_locale_unique` (`privacy_policy_id`,`locale`),
+  ADD KEY `privacy_policy_translations_locale_index` (`locale`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -1747,7 +1809,7 @@ ALTER TABLE `message_translations`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `networks`
@@ -1802,6 +1864,18 @@ ALTER TABLE `posts`
 --
 ALTER TABLE `post_translations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `privacy_policies`
+--
+ALTER TABLE `privacy_policies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `privacy_policy_translations`
+--
+ALTER TABLE `privacy_policy_translations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -1962,6 +2036,12 @@ ALTER TABLE `place_translations`
 --
 ALTER TABLE `post_translations`
   ADD CONSTRAINT `post_translations_post_id_foreign` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `privacy_policy_translations`
+--
+ALTER TABLE `privacy_policy_translations`
+  ADD CONSTRAINT `privacy_policy_translations_privacy_policy_id_foreign` FOREIGN KEY (`privacy_policy_id`) REFERENCES `privacy_policies` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `product_translations`
