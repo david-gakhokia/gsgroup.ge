@@ -4,7 +4,7 @@
     "Most sales": "ყველაზე გაყიდვადი",
     "Places": "ადგილები",
     "Working hours": "სამუშაო საათები",
-    "Contact Info": "კონტაქტი",
+    "Contact Info": "საკონტაქტო ინფორმაცია",
     "Site Map": "საიტის რუკა",
     "Contact": "კონტაქტი",
     "About Us": "ჩვენ შესახებ",
@@ -69,5 +69,7 @@
     "Our Projects": "ჩვენი პროექტები",
     "Our Services": "ჩვენი სერვისები",
     "Why GSG": "რატომ GSG",
-    "exclusives": "ექსკლუზივები"
+    "exclusives": "ექსკლუზივები",
+    "Contact Us": "კონტაქტი",
+    "Send a Message": "შეტყობინების გაგზავნა"
 }

@@ -36,30 +36,31 @@
 
                     <!-- titles -->
                     <div class="m-titles">
-                        <div class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">Get in touch</div>
+                        <div class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">{{ __('Contact form') }}</div>
                     </div>
 
                     <!-- contact form -->
                     <div class="contacts-form">
-                        <form id="cform" method="post">
+                        <form  method="post">
+                        {{-- <form id="cform" method="post"> --}}
                             <div class="group">
                                 <div class="value scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <input type="text" name="name" placeholder="Full Name">
+                                    <input type="text" name="name" placeholder="{{__('Name')}}">
                                 </div>
                             </div>
                             <div class="group">
                                 <div class="value scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <input type="text" name="email" placeholder="Email Address">
+                                    <input type="text" name="email" placeholder="{{__('E-mail')}}">
                                 </div>
                             </div>
                             <div class="group full">
                                 <div class="value scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    <textarea name="message" placeholder="Message"></textarea>
+                                    <textarea name="message" placeholder="{{ __('Message') }}"></textarea>
                                 </div>
                             </div>
                             <div class="submit scrolla-element-anim-1 scroll-animate" data-animate="active">
                                 <a href="#" class="btn" onclick="$('#cform').submit(); return false;">
-                                    Send a Message
+                                    {{ __('Send a Message') }}
                                 </a>
                             </div>
                         </form>
@@ -73,7 +74,7 @@
 
                     <!-- titles -->
                     <div class="m-titles">
-                        <h2 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">{{__('Contact info')}}</h2>
+                        <h2 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">{{__('Contact Info')}}</h2>
                     </div>
 
                     <!-- services -->
