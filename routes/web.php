@@ -23,6 +23,7 @@ use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\VisionController;
 use App\Http\Controllers\Backend\NetworkController;
 use App\Http\Controllers\Backend\ExclusiveController;
+use App\Http\Controllers\Backend\PrivacyPolicyController;
 
 
 
@@ -34,6 +35,7 @@ use App\Http\Controllers\Backend\ExclusiveController;
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/project/{id}', [HomeController::class, 'show']);
+Route::get('privacy-policy', [HomeController::class, 'privacy_policy'])->name('privacy-policy');
 
 
 // End Front Routes
@@ -60,7 +62,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('projects', ProjectController::class);
 
     Route::resource('exclusives', ExclusiveController::class);
-    
+
     Route::resource('visions', VisionController::class);
 
 
@@ -69,7 +71,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('contacts', ContactController::class);
     Route::resource('messages', MessageController::class);
 
-
+    // Privacy-Policy
+    Route::get('privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy-policy');
+    Route::post('privacy-policy', [PrivacyPolicyController::class, 'store'])->name('privacy-policy.store');
 
     // Settings Route
 

@@ -73,6 +73,12 @@ class HomeController extends Controller
         return view('frontend.contact');
     }
 
+    public function privacy_policy()
+    {
+        return view('frontend.privacy-policy');
+    }
+
+
     public function repair()
     {
         return view('frontend.repair');

@@ -34,7 +34,7 @@
                   </ul>
                     <div class="tab-content bg-transparent">
                         <div id="note-full-container" class="note-has-grid row">
-                            <form action="{{ route('projects.update',$project->id) }}" class="needs-validation"  method="POST"  enctype="multipart/form-data" >
+                            <form action="{{ route('exclusives.update',$exclusive->id) }}" class="needs-validation"  method="POST"  enctype="multipart/form-data" >
                                 @method('PUT')
                                 @csrf
                                 <div class="card-body">
@@ -48,9 +48,8 @@
                                                             <i class="fas fa-file-alt"></i>
                                                         </div>
                                                     </div>
-                                                    <input type="text" name="{{ $locale }}[title]" value="{{ $project->translate($locale)->title}}"
-                                                        placeholder="{{ $project->translate($locale)->title}}" class="form-control marker" required="">
-
+                                                    <input type="text" name="{{ $locale }}[title]" value="{{ $exclusive->translate($locale)->title}}"
+                                                        placeholder="{{ $exclusive->translate($locale)->title}}" class="form-control marker" required="">
                                                     <div class="invalid-feedback">
                                                         {{__('Opss Name is Required')}} ! !
                                                     </div>
@@ -66,8 +65,8 @@
                                                             <i class="fas fa-file-alt"></i>
                                                         </div>
                                                     </div>
-                                                    <input type="text" name="{{ $locale }}[name]" value="{{ $project->translate($locale)->name}}"
-                                                        placeholder="{{ $project->translate($locale)->name}}" class="form-control marker" required="">
+                                                    <input type="text" name="{{ $locale }}[name]" value="{{ $exclusive->translate($locale)->name}}"
+                                                        placeholder="{{ $exclusive->translate($locale)->name}}" class="form-control marker" required="">
 
                                                     <div class="invalid-feedback">
                                                         {{__('Opss Name is Required')}} ! !
@@ -86,7 +85,7 @@
                                                     <i class="fab fa-linkedin"></i>
                                                     </div>
                                                 </div>
-                                                <input type="text"  name="icon"  value="{{ $project->icon }}" class="form-control phone-number" placeholder="მ.გ fab fa-linkedin">
+                                                <input type="text"  name="icon"  value="{{ $exclusive->icon }}" class="form-control phone-number" placeholder="მ.გ fab fa-linkedin">
                                                     <div class="invalid-feedback">
                                                         {{__('Opss Price is Required')}} !
                                                     </div>
@@ -101,7 +100,7 @@
                                                             <i class="fas fa-image"></i>
                                                         </div>
                                                     </div>
-                                                    <input type="file" name="image"   value="{{ $project->image }}" class="form-control file">
+                                                    <input type="file" name="image"   value="{{ $exclusive->image }}" class="form-control file">
                                                 </div>
                                                 <div class="invalid-feedback">
                                                     {{__('Opss, Image is Required')}} ! !
@@ -110,8 +109,8 @@
 
                                             <div class="form-group col-md-4">
                                                 <label>@lang('dashboard.Image')</label>
-                                                @if ($project->image)
-                                                    <img src="{{ asset('uploads/projects/'.$project->image) }}"  width="100">
+                                                @if ($exclusive->image)
+                                                    <img src="{{ asset('uploads/projects/'.$exclusive->image) }}"  width="100">
                                                 @else
                                                     <img src="https://img.icons8.com/windows/100/000000/no-image.png"/>
                                                 @endif
@@ -125,7 +124,7 @@
                                             <div class="form-group col-md-4">
                                                 <label for="status">@lang('dashboard.Select a Status')</label>
                                                 <select class="form-control" name="status">
-                                                    @if ($project->status == 1)
+                                                    @if ($exclusive->status == 1)
                                                         <option class="badge badge-success badge-shadow"  value="1"  selected ><i class="fas fa-check-circle"></i> @lang('dashboard.Active')</option>
                                                         <option class="badge badge-danger badge-shadow" value="0"><i class="fas fa-check-circle"></i> @lang('dashboard.Not active')</option>
                                                     @else
@@ -142,7 +141,7 @@
                                             <div class="form-group col-md-12">
                                                 <div class="form-group mb-0">
                                                     <label>@lang('dashboard.Description') ({{ strtoupper($locale) }})</label>
-                                                    <textarea class="form-control" name="{{ $locale }}[description]">{{ $project->translate($locale)->description}}</textarea>
+                                                    <textarea class="form-control" name="{{ $locale }}[description]">{{ $exclusive->translate($locale)->description}}</textarea>
                                                     <div class="invalid-feedback">
                                                         {{__('Opss , Description is Required')}} !
                                                     </div>
@@ -157,7 +156,7 @@
                                     <button class="btn btn-success">
                                         <i class="fas fa-save"></i> @lang('dashboard.Update')
                                     </button>
-                                    <a href="{{ route ('projects.index') }}" class="btn btn-info">
+                                    <a href="{{ route ('exclusives.index') }}" class="btn btn-info">
                                         <i class="fas fa-arrow-circle-left"></i> @lang('dashboard.Back')
                                     </a>
                                 </div>
