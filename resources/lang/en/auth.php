@@ -1,0 +1,27 @@
+<?php
+
+return array (
+  'Authorization' => 'Authorization',
+  'Confirm Password' => 'Confirm Password',
+  'Email' => 'Email',
+  'Forgot Your Password' => 'Forgot Your Password',
+  'Input New Password' => 'Input New Password',
+  'Login' => 'Login',
+  'Logout' => 'Logout',
+  'New password' => 'New password',
+  'Or' => 'Or',
+  'Password' => 'Password',
+  'Password Recovery' => 'Password Recovery',
+  'Register' => 'Register',
+  'Registration suspended' => 'Registration suspended',
+  'Remember Me' => 'Remember Me',
+  'Reset Password' => 'Reset Password',
+  'Send' => 'Send',
+  'Unfortunately registration is not possible' => 'Unfortunately registration is not possible',
+  'Update Password' => 'Update Password',
+  'We will send you a link to reset your password' => 'We will send you a link to reset your password',
+  'We will send you a link via email to reset your password' => 'We will send you a link via email to reset your password',
+  'failed' => 'These credentials do not match our records.',
+  'password' => 'The provided password is incorrect.',
+  'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+);

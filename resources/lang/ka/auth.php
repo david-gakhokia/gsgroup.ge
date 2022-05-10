@@ -1,0 +1,25 @@
+<?php
+
+return array (
+  'Authorization' => 'ავტორიზაცია',
+  'Confirm Password' => 'პაროლის დადასტურება',
+  'Email' => 'ელ.ფოსტა',
+  'Forgot Your Password' => 'დაგავიწყდა პაროლი',
+  'Input New Password' => 'შეიყვანეთ ახალი პაროლი',
+  'Login' => 'შესვლა',
+  'Logout' => 'გასვლა',
+  'New password' => 'ახალი პაროლი',
+  'Or' => 'ან',
+  'Password' => 'პაროლი',
+  'Password Recovery' => 'პაროლის აღდგენა',
+  'Register' => 'რეგისტრაცია',
+  'Registration suspended' => 'რეგისტრაცია შეჩერებულია',
+  'Remember Me' => 'დამახსოვრება',
+  'Reset Password' => 'პაროლის განულება',
+  'Send' => 'გაგზავნა',
+  'Unfortunately registration is not possible' => 'სამწუხაროდ რეგისტრაცია შეუძლებელია',
+  'Update Password' => 'პაროლის განახლება',
+  'We will send you a link to reset your password' => 'ჩვენ გამოგიგზავნით ბმულს თქვენი პაროლის აღსადგენად',
+  'We will send you a link via email to reset your password' => 'ჩვენ გამოგიგზავნით ბმულს ელ.ფოსტა -ზე თქვენი პაროლის აღსადგენად',
+  'password' => 'პაროლი',
+);
