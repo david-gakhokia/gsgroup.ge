@@ -1,6 +1,7 @@
 <?php
 
 return array (
+  'About Us' => 'ჩვენ შესახებ',
   'Accepted' => 'დადასტურებულია',
   'Action' => 'მოქმედება',
   'Active' => 'აქტიური',
@@ -72,6 +73,7 @@ return array (
   'Posts' => 'პოსტები',
   'Price' => 'ფასი',
   'Print' => 'ბეჭდვა',
+  'Privacy Policy' => 'კონფიდენციალობა',
   'Products' => 'პროდუქტები',
   'Profile' => 'პროფილი',
   'Projects' => 'პროექტები',

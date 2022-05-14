@@ -14,9 +14,9 @@
                     <a href="?language=ka" data-toggle="tooltip" title="ქართული">
                         <img src="https://img.icons8.com/emoji/32/000000/georgia-emoji.png"/>
                     </a>
-                    <a href="?language=ru" data-toggle="tooltip" title="Russian">
+                    {{-- <a href="?language=ru" data-toggle="tooltip" title="Russian">
                         <img src="https://img.icons8.com/emoji/32/000000/russia-emoji.png"/>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
           </div>
@@ -42,6 +42,18 @@
                 </ul>
             </li>
             @endcan
+
+            @can('post-list')
+            <li class="dropdown">
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="file"></i><span>@lang('dashboard.Pages')</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('privacy-policy') }}">@lang('dashboard.Privacy Policy')</a></li>
+                    <li><a class="nav-link" href="#0">@lang('dashboard.About Us')</a></li>
+
+                </ul>
+            </li>
+            @endcan
+
 
             @can('employee-list')
             <li class="dropdown">

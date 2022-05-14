@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2022 at 09:48 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Generation Time: May 14, 2022 at 11:14 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -74,8 +74,6 @@ CREATE TABLE `clients` (
 
 INSERT INTO `clients` (`id`, `image`, `link`, `status`, `created_at`, `updated_at`) VALUES
 (58, '20220419164701.png', 'https://www.facebook.com/KolosResidence', 'enable', '2022-04-18 16:34:58', '2022-04-19 12:47:01'),
-(59, '20220418203517.png', 'http://diem.ge/', 'enable', '2022-04-18 16:35:17', '2022-04-19 12:48:05'),
-(60, '20220420125344.png', 'http://kerdzebi.ge/', 'enable', '2022-04-18 16:36:19', '2022-04-20 08:53:44'),
 (61, '20220419164552.png', 'https://www.facebook.com/ParadiseGeorgiaGroup/', 'enable', '2022-04-18 16:36:59', '2022-04-19 12:45:52');
 
 -- --------------------------------------------------------
@@ -102,12 +100,6 @@ INSERT INTO `client_translations` (`id`, `client_id`, `locale`, `name`, `descrip
 (172, 58, 'en', 'Kolos Residence', 'Kolos Residence', '2022-04-18 16:34:58', '2022-04-19 12:47:01'),
 (173, 58, 'ka', 'კოლოს რეზიდენსი', 'კოლოს რეზიდენსი', '2022-04-18 16:34:58', '2022-04-19 12:47:01'),
 (174, 58, 'ru', 'კოლოს რეზიდენსი', 'კოლოს რეზიდენსი', '2022-04-18 16:34:58', '2022-04-19 12:47:01'),
-(175, 59, 'en', 'DMG', 'DMG', '2022-04-18 16:35:17', '2022-04-19 12:48:05'),
-(176, 59, 'ka', 'დი ემ ჯი', 'DMG', '2022-04-18 16:35:17', '2022-04-19 12:48:05'),
-(177, 59, 'ru', 'DMG', 'DMG', '2022-04-18 16:35:17', '2022-04-19 12:48:05'),
-(178, 60, 'en', 'Kerdzebi.ge®', 'Kerdzebi.ge®', '2022-04-18 16:36:19', '2022-04-20 08:53:44'),
-(179, 60, 'ka', 'Kerdzebi.ge®', 'Kerdzebi.ge®', '2022-04-18 16:36:19', '2022-04-20 08:53:44'),
-(180, 60, 'ru', 'Kerdzebi.ge®', 'Kerdzebi.ge®', '2022-04-18 16:36:19', '2022-04-20 08:53:44'),
 (181, 61, 'en', 'Paradise Georgia', 'Paradise Georgia', '2022-04-18 16:36:59', '2022-04-19 12:45:52'),
 (182, 61, 'ka', 'Paradise Georgia', 'Paradise Georgia', '2022-04-18 16:36:59', '2022-04-19 12:45:52'),
 (183, 61, 'ru', 'Paradise Georgia', 'Paradise Georgia', '2022-04-18 16:36:59', '2022-04-19 12:45:52');
@@ -231,11 +223,11 @@ CREATE TABLE `exclusives` (
 --
 
 INSERT INTO `exclusives` (`id`, `image`, `icon`, `status`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Dolorem debitis numq', 0, '2022-05-07 08:14:18', '2022-05-07 08:14:18'),
-(2, NULL, 'Voluptatem velit ad', 0, '2022-05-07 08:40:09', '2022-05-07 08:40:09'),
-(3, NULL, 'Voluptas voluptatem', 1, '2022-05-07 08:40:21', '2022-05-07 08:40:21'),
-(4, NULL, 'Rerum in quibusdam v', 1, '2022-05-07 08:40:33', '2022-05-07 08:40:33'),
-(5, NULL, 'Odit ut laboriosam', 0, '2022-05-09 11:04:13', '2022-05-09 11:04:13');
+(6, '20220512204438.png', 'Duis esse inventore', 1, '2022-05-12 16:44:38', '2022-05-12 16:44:38'),
+(7, '20220512204459.png', 'Corporis qui volupta', 1, '2022-05-12 16:44:59', '2022-05-12 16:45:26'),
+(8, '20220512204903.png', 'Fugit quasi quia vo', 1, '2022-05-12 16:49:03', '2022-05-12 16:49:40'),
+(9, '20220512204915.png', 'Numquam modi est mag', 1, '2022-05-12 16:49:15', '2022-05-12 16:49:15'),
+(10, '20220512204929.png', 'Dicta nisi id et lab', 1, '2022-05-12 16:49:29', '2022-05-12 16:49:29');
 
 -- --------------------------------------------------------
 
@@ -259,21 +251,21 @@ CREATE TABLE `exclusive_translations` (
 --
 
 INSERT INTO `exclusive_translations` (`id`, `exclusive_id`, `locale`, `title`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'en', 'Nesciunt id in expl', 'Mollie Ayala', 'Veniam omnis illo t', '2022-05-07 08:14:18', '2022-05-07 08:14:18'),
-(2, 1, 'ka', 'Veniam tenetur rem', 'Raymond Wiley', 'Temporibus sunt odio', '2022-05-07 08:14:18', '2022-05-07 08:14:18'),
-(3, 1, 'ru', 'Illum excepteur off', 'Cassady Hyde', 'Consequuntur volupta', '2022-05-07 08:14:18', '2022-05-07 08:14:18'),
-(4, 2, 'en', 'Qui non adipisci non', 'Rashad Mullen', 'Incididunt autem aut', '2022-05-07 08:40:09', '2022-05-07 08:40:09'),
-(5, 2, 'ka', 'Exercitation omnis n', 'Hashim Whitaker', 'Dolorem eos velit e', '2022-05-07 08:40:09', '2022-05-07 08:40:09'),
-(6, 2, 'ru', 'Et in aliquid simili', 'Aidan Benton', 'Eum esse eum quidem', '2022-05-07 08:40:09', '2022-05-07 08:40:09'),
-(7, 3, 'en', 'Cupiditate velit exp', 'Jermaine Christian', 'Aliquip eum quia et', '2022-05-07 08:40:21', '2022-05-07 08:40:21'),
-(8, 3, 'ka', 'Et et doloremque seq', 'Dara Vincent', 'Elit qui consequatu', '2022-05-07 08:40:21', '2022-05-07 08:40:21'),
-(9, 3, 'ru', 'Suscipit dolorum ut', 'Wade Cantrell', 'Dolorem quia eum est', '2022-05-07 08:40:21', '2022-05-07 08:40:21'),
-(10, 4, 'en', 'Voluptas enim in aut', 'Rowan Hinton', 'Qui qui irure commod', '2022-05-07 08:40:33', '2022-05-07 08:40:33'),
-(11, 4, 'ka', 'Voluptatem Eaque se', 'Berk Houston', 'Exercitation quasi o', '2022-05-07 08:40:34', '2022-05-07 08:40:34'),
-(12, 4, 'ru', 'Nostrum officiis cor', 'Leila Grimes', 'Saepe dolor cum temp', '2022-05-07 08:40:34', '2022-05-07 08:40:34'),
-(13, 5, 'en', 'Aperiam duis ad labo12', 'Darrel Griffith', 'Asperiores velit sin', '2022-05-09 11:04:13', '2022-05-10 11:19:07'),
-(14, 5, 'ka', 'Dolore animi proide', 'Scott Mclaughlin', 'Ea qui sit corrupti', '2022-05-09 11:04:13', '2022-05-09 11:04:13'),
-(15, 5, 'ru', 'Nihil dolor nobis ip', 'Ursula Branch', 'Et tempor maiores et', '2022-05-09 11:04:13', '2022-05-09 11:04:13');
+(16, 6, 'en', 'At nihil voluptate e', 'Andrew Fleming', 'Qui rem in aperiam v', '2022-05-12 16:44:38', '2022-05-12 16:44:38'),
+(17, 6, 'ka', 'Minima fugiat praese', 'Zeph Wilder', 'Illum quo inventore', '2022-05-12 16:44:38', '2022-05-12 16:44:38'),
+(18, 6, 'ru', 'Ipsa enim dolore es', 'Angela Massey', 'Cupidatat qui non in', '2022-05-12 16:44:38', '2022-05-12 16:44:38'),
+(19, 7, 'en', 'Nisi pariatur Dolor', 'Ronan Pate', 'Eos Nam ut alias ex', '2022-05-12 16:44:59', '2022-05-12 16:44:59'),
+(20, 7, 'ka', 'Qui earum in debitis', 'Casey Franco', 'Hic fugiat est quos', '2022-05-12 16:44:59', '2022-05-12 16:44:59'),
+(21, 7, 'ru', 'Dolorem voluptas eni', 'Uriah Bender', 'Voluptas inventore l', '2022-05-12 16:44:59', '2022-05-12 16:44:59'),
+(22, 8, 'en', 'Eiusmod quis laborum', 'September Moran', 'Eu vel nisi voluptas', '2022-05-12 16:49:03', '2022-05-12 16:49:03'),
+(23, 8, 'ka', 'Qui sint obcaecati o', 'Daria Hoffman', 'Odio sit in possimus', '2022-05-12 16:49:03', '2022-05-12 16:49:03'),
+(24, 8, 'ru', 'Quos amet tenetur p', 'Lynn Guthrie', 'In quam perferendis', '2022-05-12 16:49:03', '2022-05-12 16:49:03'),
+(25, 9, 'en', 'Dignissimos officia', 'Diana Bell', 'Aut unde aut est dol', '2022-05-12 16:49:15', '2022-05-12 16:49:15'),
+(26, 9, 'ka', 'Magna quasi qui illo', 'Kalia Gilliam', 'Sequi praesentium et', '2022-05-12 16:49:15', '2022-05-12 16:49:15'),
+(27, 9, 'ru', 'Omnis quam cumque et', 'Teagan Colon', 'Tempore quis velit', '2022-05-12 16:49:15', '2022-05-12 16:49:15'),
+(28, 10, 'en', 'Quis consectetur ex', 'Lawrence Mays', 'Nihil iusto enim ips', '2022-05-12 16:49:29', '2022-05-12 16:49:29'),
+(29, 10, 'ka', 'Odio libero est non', 'Wing Horne', 'Et aute laboris anim', '2022-05-12 16:49:29', '2022-05-12 16:49:29'),
+(30, 10, 'ru', 'Laboriosam aute fug', 'Donovan Mason', 'Proident in ea quia', '2022-05-12 16:49:29', '2022-05-12 16:49:29');
 
 -- --------------------------------------------------------
 
@@ -495,7 +487,8 @@ CREATE TABLE `model_has_roles` (
 --
 
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
-(1, 'App\\Models\\User', 1);
+(1, 'App\\Models\\User', 1),
+(1, 'App\\Models\\User', 7);
 
 -- --------------------------------------------------------
 
@@ -518,9 +511,7 @@ CREATE TABLE `networks` (
 --
 
 INSERT INTO `networks` (`id`, `icon`, `image`, `link`, `frame`, `created_at`, `updated_at`) VALUES
-(25, 'fab fa-facebook', NULL, 'https://www.facebook.com/Georgian-Sales-Group-100631215555633/', '123', '2022-04-22 09:36:51', '2022-04-22 10:17:19'),
-(26, 'fab fa-instagram', NULL, 'https://www.facebook.com/Georgian-Sales-Group-100631215555633/', NULL, '2022-04-22 09:37:02', '2022-04-22 09:37:02'),
-(27, 'fab fa-linkedin-in', NULL, 'https://www.facebook.com/Georgian-Sales-Group-100631215555633/', NULL, '2022-04-22 09:37:34', '2022-04-22 09:37:34');
+(25, 'fab fa-facebook', NULL, 'https://www.facebook.com/Georgian-Sales-Group-100631215555633/', '123', '2022-04-22 09:36:51', '2022-04-22 10:17:19');
 
 -- --------------------------------------------------------
 
@@ -832,9 +823,9 @@ CREATE TABLE `privacy_policy_translations` (
 --
 
 INSERT INTO `privacy_policy_translations` (`id`, `privacy_policy_id`, `locale`, `title`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 1, 'en', 'ტესტ1', 'Zeus Goodwin', 'Enim minima a hic ea', '2022-05-10 11:09:42', '2022-05-10 11:09:53'),
-(2, 1, 'ka', 'Tempora enim ab dist', 'Illana Deleon', 'Alias qui et esse ma', '2022-05-10 11:09:42', '2022-05-10 11:09:42'),
-(3, 1, 'ru', 'Eu consectetur id', 'Whilemina Cortez', 'Magna dolore dolor e', '2022-05-10 11:09:42', '2022-05-10 11:09:42');
+(1, 1, 'en', 'Privacy Policy', 'Privacy Policy', 'Last updated: March 28, 2022\r\n\r\n \r\n\r\nThis Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.\r\n\r\n \r\n\r\nWe use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Template.\r\n\r\n \r\n\r\nCollecting and Using Your Personal Data\r\n\r\n \r\n\r\nTypes of Data Collected\r\n\r\n \r\n\r\nPersonal Data\r\n\r\nWhile using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:\r\n\r\n \r\n\r\nEmail address\r\nFirst name and last name\r\nPhone number\r\nAddress, State, Province, ZIP/Postal code, City\r\nUsage Data\r\n \r\n\r\nUsage Data\r\n\r\nUsage Data is collected automatically when using the Service.\r\n\r\n \r\n\r\nUsage Data may include information such as Your Devices Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.\r\n\r\n \r\n\r\nWhen You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.\r\n\r\n \r\n\r\nWe may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.\r\n\r\n \r\n\r\nInformation from Third-Party Social Media Services\r\n\r\n \r\n\r\nThe Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:\r\n\r\nGoogle\r\nFacebook\r\nTwitter\r\n \r\n\r\nIf You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Services account, such as Your name, Your email address, Your activities or Your contact list associated with that account.\r\n\r\n \r\n\r\nYou may also have the option of sharing additional information with the Company through Your Third-Party Social Media Services account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.\r\n\r\n \r\n\r\nTracking Technologies and Cookies\r\n\r\n \r\n\r\nCookies or Browser Cookies. A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.\r\nFlash Cookies. Certain features of our Service may use local stored objects (or Flash Cookies) to collect and store information about Your preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how You can delete Flash Cookies, please read \"Where can I change the settings for disabling, or deleting local shared objects?\" available at https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_\r\n \r\n\r\nTo provide and maintain our Service, including to monitor the usage of our Service.\r\n\r\n \r\n\r\nTo manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.\r\n\r\n \r\n\r\nFor the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.\r\n\r\n \r\n\r\nTo contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile applications push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.\r\n\r\n \r\n\r\nTo provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.\r\n\r\n \r\n\r\nTo manage Your requests: To attend and manage Your requests to Us.\r\n\r\n \r\n\r\nFor business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.\r\n\r\n \r\n\r\nFor other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.\r\n\r\n \r\n\r\nTransfer of Your Personal Data\r\n\r\n \r\n\r\nYour information, including Personal Data, is processed at the Companys operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.\r\n\r\n \r\n\r\nYour consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.\r\n\r\n \r\n\r\nThe Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.\r\n\r\n \r\n\r\nSecurity of Your Personal Data\r\n\r\n \r\n\r\nThe security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.\r\n\r\n \r\n\r\nChanges to this Privacy Policy\r\n\r\n \r\n\r\nWe may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.\r\n\r\n \r\n\r\nWe will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the \"Last updated\" date at the top of this Privacy Policy.\r\n\r\n \r\n\r\nYou are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.', '2022-05-10 11:09:42', '2022-05-14 09:08:49'),
+(2, 1, 'ka', 'კონფიდენციალურობის პოლიტიკა', 'კონფიდენციალურობის პოლიტიკა', 'Last updated: March 28, 2022\r\n\r\n \r\n\r\nThis Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.\r\n\r\n \r\n\r\nWe use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Template.\r\n\r\n \r\n\r\nCollecting and Using Your Personal Data\r\n\r\n \r\n\r\nTypes of Data Collected\r\n\r\n \r\n\r\nPersonal Data\r\n\r\nWhile using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:\r\n\r\n \r\n\r\nEmail address\r\nFirst name and last name\r\nPhone number\r\nAddress, State, Province, ZIP/Postal code, City\r\nUsage Data\r\n \r\n\r\nUsage Data\r\n\r\nUsage Data is collected automatically when using the Service.\r\n\r\n \r\n\r\nUsage Data may include information such as Your Devices Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.\r\n\r\n \r\n\r\nWhen You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.\r\n\r\n \r\n\r\nWe may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.\r\n\r\n \r\n\r\nInformation from Third-Party Social Media Services\r\n\r\n \r\n\r\nThe Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:\r\n\r\nGoogle\r\nFacebook\r\nTwitter\r\n \r\n\r\nIf You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Services account, such as Your name, Your email address, Your activities or Your contact list associated with that account.\r\n\r\n \r\n\r\nYou may also have the option of sharing additional information with the Company through Your Third-Party Social Media Services account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.\r\n\r\n \r\n\r\nTracking Technologies and Cookies\r\n\r\n \r\n\r\nCookies or Browser Cookies. A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.\r\nFlash Cookies. Certain features of our Service may use local stored objects (or Flash Cookies) to collect and store information about Your preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how You can delete Flash Cookies, please read \"Where can I change the settings for disabling, or deleting local shared objects?\" available at https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_\r\n \r\n\r\nTo provide and maintain our Service, including to monitor the usage of our Service.\r\n\r\n \r\n\r\nTo manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.\r\n\r\n \r\n\r\nFor the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.\r\n\r\n \r\n\r\nTo contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile applications push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.\r\n\r\n \r\n\r\nTo provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.\r\n\r\n \r\n\r\nTo manage Your requests: To attend and manage Your requests to Us.\r\n\r\n \r\n\r\nFor business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.\r\n\r\n \r\n\r\nFor other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.\r\n\r\n \r\n\r\nTransfer of Your Personal Data\r\n\r\n \r\n\r\nYour information, including Personal Data, is processed at the Companys operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.\r\n\r\n \r\n\r\nYour consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.\r\n\r\n \r\n\r\nThe Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.\r\n\r\n \r\n\r\nSecurity of Your Personal Data\r\n\r\n \r\n\r\nThe security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.\r\n\r\n \r\n\r\nChanges to this Privacy Policy\r\n\r\n \r\n\r\nWe may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.\r\n\r\n \r\n\r\nWe will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the \"Last updated\" date at the top of this Privacy Policy.\r\n\r\n \r\n\r\nYou are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.', '2022-05-10 11:09:42', '2022-05-14 09:08:49'),
+(3, 1, 'ru', 'Privacy Policy', 'Privacy Policy', 'Last updated: March 28, 2022\r\n\r\n \r\n\r\nThis Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.\r\n\r\n \r\n\r\nWe use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Template.\r\n\r\n \r\n\r\nCollecting and Using Your Personal Data\r\n\r\n \r\n\r\nTypes of Data Collected\r\n\r\n \r\n\r\nPersonal Data\r\n\r\nWhile using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:\r\n\r\n \r\n\r\nEmail address\r\nFirst name and last name\r\nPhone number\r\nAddress, State, Province, ZIP/Postal code, City\r\nUsage Data\r\n \r\n\r\nUsage Data\r\n\r\nUsage Data is collected automatically when using the Service.\r\n\r\n \r\n\r\nUsage Data may include information such as Your Devices Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.\r\n\r\n \r\n\r\nWhen You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.\r\n\r\n \r\n\r\nWe may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.\r\n\r\n \r\n\r\nInformation from Third-Party Social Media Services\r\n\r\n \r\n\r\nThe Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:\r\n\r\nGoogle\r\nFacebook\r\nTwitter\r\n \r\n\r\nIf You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Services account, such as Your name, Your email address, Your activities or Your contact list associated with that account.\r\n\r\n \r\n\r\nYou may also have the option of sharing additional information with the Company through Your Third-Party Social Media Services account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.\r\n\r\n \r\n\r\nTracking Technologies and Cookies\r\n\r\n \r\n\r\nCookies or Browser Cookies. A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.\r\nFlash Cookies. Certain features of our Service may use local stored objects (or Flash Cookies) to collect and store information about Your preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how You can delete Flash Cookies, please read \"Where can I change the settings for disabling, or deleting local shared objects?\" available at https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_\r\n \r\n\r\nTo provide and maintain our Service, including to monitor the usage of our Service.\r\n\r\n \r\n\r\nTo manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.\r\n\r\n \r\n\r\nFor the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.\r\n\r\n \r\n\r\nTo contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile applications push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.\r\n\r\n \r\n\r\nTo provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.\r\n\r\n \r\n\r\nTo manage Your requests: To attend and manage Your requests to Us.\r\n\r\n \r\n\r\nFor business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.\r\n\r\n \r\n\r\nFor other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.\r\n\r\n \r\n\r\nTransfer of Your Personal Data\r\n\r\n \r\n\r\nYour information, including Personal Data, is processed at the Companys operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.\r\n\r\n \r\n\r\nYour consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.\r\n\r\n \r\n\r\nThe Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.\r\n\r\n \r\n\r\nSecurity of Your Personal Data\r\n\r\n \r\n\r\nThe security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.\r\n\r\n \r\n\r\nChanges to this Privacy Policy\r\n\r\n \r\n\r\nWe may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.\r\n\r\n \r\n\r\nWe will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the \"Last updated\" date at the top of this Privacy Policy.\r\n\r\n \r\n\r\nYou are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.', '2022-05-10 11:09:42', '2022-05-14 09:08:49');
 
 -- --------------------------------------------------------
 
@@ -1148,8 +1139,8 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `image`, `icon`, `status`, `created_at`, `updated_at`) VALUES
-(4, NULL, 'fas fa-chart-bar', 1, '2022-04-19 12:12:02', '2022-04-19 12:27:07'),
-(5, NULL, 'fas fa-copyright', 1, '2022-04-19 12:15:07', '2022-04-19 12:15:07'),
+(4, NULL, 'fas fa-chart-bar', 0, '2022-04-19 12:12:02', '2022-05-11 14:07:21'),
+(5, NULL, 'fas fa-copyright', 0, '2022-04-19 12:15:07', '2022-05-11 14:08:43'),
 (6, NULL, 'far fa-object-group', 1, '2022-04-19 12:27:49', '2022-04-19 12:27:49'),
 (7, NULL, 'fas fa-ad', 1, '2022-04-19 12:28:27', '2022-04-19 12:28:27'),
 (8, NULL, 'fas fa-rocket', 1, '2022-04-19 12:28:57', '2022-04-19 12:28:57'),
@@ -1176,24 +1167,24 @@ CREATE TABLE `service_translations` (
 --
 
 INSERT INTO `service_translations` (`id`, `service_id`, `locale`, `title`, `description`, `created_at`, `updated_at`) VALUES
-(7, 4, 'en', 'გაყიდვების პროცესის ორგანიზება', 'გაყიდვების პროცესის ორგანიზება', '2022-04-19 12:12:02', '2022-04-19 12:12:02'),
-(8, 4, 'ka', 'გაყიდვების პროცესის ორგანიზება', 'გაყიდვების პროცესის ორგანიზება', '2022-04-19 12:12:02', '2022-04-19 12:12:02'),
-(9, 4, 'ru', 'გაყიდვების პროცესის ორგანიზება', 'გაყიდვების პროცესის ორგანიზება', '2022-04-19 12:12:02', '2022-04-19 12:12:02'),
-(10, 5, 'en', 'ექსკლუზიური ქონების მართვა', 'ექსკლუზიური ქონების მართვა', '2022-04-19 12:15:07', '2022-04-19 12:15:07'),
+(7, 4, 'en', 'Sales managment', 'Sales managment', '2022-04-19 12:12:02', '2022-05-11 01:20:48'),
+(8, 4, 'ka', 'გაყიდვების პროცესის ორგანიზება', 'Организация процесса продаж', '2022-04-19 12:12:02', '2022-05-11 01:20:48'),
+(9, 4, 'ru', 'Организация процесса продаж', 'გაყიდვების პროცესის ორგანიზება', '2022-04-19 12:12:02', '2022-05-11 01:20:48'),
+(10, 5, 'en', 'Lead the exclusive projects', 'Lead the exclusive projects', '2022-04-19 12:15:07', '2022-05-11 01:21:30'),
 (11, 5, 'ka', 'ექსკლუზიური ქონების მართვა', 'ექსკლუზიური ქონების მართვა', '2022-04-19 12:15:07', '2022-04-19 12:15:07'),
-(12, 5, 'ru', 'ექსკლუზიური ქონების მართვა', 'ექსკლუზიური ქონების მართვა', '2022-04-19 12:15:07', '2022-04-19 12:15:07'),
-(13, 6, 'en', 'საინვესტიციო პროექტების მართვა', 'საინვესტიციო პროექტების მართვა', '2022-04-19 12:27:49', '2022-04-19 12:27:49'),
+(12, 5, 'ru', 'Управление эксклюзивными проектами', 'Управление эксклюзивными проектами', '2022-04-19 12:15:07', '2022-05-11 01:21:30'),
+(13, 6, 'en', 'Lead the investment projects', 'Lead the investment projects', '2022-04-19 12:27:49', '2022-05-11 01:22:03'),
 (14, 6, 'ka', 'საინვესტიციო პროექტების მართვა', 'საინვესტიციო პროექტების მართვა', '2022-04-19 12:27:49', '2022-04-19 12:27:49'),
-(15, 6, 'ru', 'საინვესტიციო პროექტების მართვა', 'საინვესტიციო პროექტების მართვა', '2022-04-19 12:27:49', '2022-04-19 12:27:49'),
-(16, 7, 'en', 'ბრენდინგი და სოც. მედია', 'ბრენდინგი და სოც. მედია', '2022-04-19 12:28:27', '2022-04-19 12:28:27'),
+(15, 6, 'ru', 'Управление продукта для инвестиции', 'Управление продукта для инвестиции', '2022-04-19 12:27:49', '2022-05-11 01:22:03'),
+(16, 7, 'en', 'Branding and Social media', 'Branding and Social media', '2022-04-19 12:28:27', '2022-05-11 01:22:34'),
 (17, 7, 'ka', 'ბრენდინგი და სოც. მედია', 'ბრენდინგი და სოც. მედია', '2022-04-19 12:28:27', '2022-04-19 12:28:27'),
-(18, 7, 'ru', 'ბრენდინგი და სოც. მედია', 'ბრენდინგი და სოც. მედია', '2022-04-19 12:28:27', '2022-04-19 12:28:27'),
-(19, 8, 'en', 'ციფრული მომსახურება', 'ციფრული მომსახურება', '2022-04-19 12:28:57', '2022-04-19 12:28:57'),
+(18, 7, 'ru', 'Брендинг и соц. медия', 'Брендинг и соц. медия', '2022-04-19 12:28:27', '2022-05-11 01:22:34'),
+(19, 8, 'en', 'Digital service', 'Digital service', '2022-04-19 12:28:57', '2022-05-11 01:23:03'),
 (20, 8, 'ka', 'ციფრული მომსახურება', 'ციფრული მომსახურება', '2022-04-19 12:28:57', '2022-04-19 12:28:57'),
-(21, 8, 'ru', 'ციფრული მომსახურება', 'ციფრული მომსახურება', '2022-04-19 12:28:57', '2022-04-19 12:28:57'),
-(22, 9, 'en', 'კონსულტაცია უძრავ ქონებასთან დაკავშირებით', 'კონსულტაცია უძრავ ქონებასთან დაკავშირებით', '2022-04-19 12:29:37', '2022-04-19 12:29:37'),
+(21, 8, 'ru', 'Цифровые услуги', 'Цифровые услуги', '2022-04-19 12:28:57', '2022-05-11 01:23:03'),
+(22, 9, 'en', 'Consultation for real estate', 'Consultation for real estate', '2022-04-19 12:29:37', '2022-05-11 01:23:29'),
 (23, 9, 'ka', 'კონსულტაცია უძრავ ქონებასთან დაკავშირებით', 'კონსულტაცია უძრავ ქონებასთან დაკავშირებით', '2022-04-19 12:29:37', '2022-04-19 12:29:37'),
-(24, 9, 'ru', 'კონსულტაცია უძრავ ქონებასთან დაკავშირებით', 'კონსულტაცია უძრავ ქონებასთან დაკავშირებით', '2022-04-19 12:29:37', '2022-04-19 12:29:37');
+(24, 9, 'ru', 'Консульация по поводу недвижимости', 'Консульация по поводу недвижимости', '2022-04-19 12:29:37', '2022-05-11 01:23:29');
 
 -- --------------------------------------------------------
 
@@ -1245,9 +1236,9 @@ CREATE TABLE `setting_translations` (
 --
 
 INSERT INTO `setting_translations` (`id`, `setting_id`, `locale`, `name`, `title`, `description`, `address`, `start_time_text`, `end_time_text`, `created_at`, `updated_at`) VALUES
-(26, 11, 'en', 'ჩვენ ვართ პროფესიონალთა გუნდი', 'Georgian Sales Group', 'რომელიც სამშენებლო დეველოპერულ სფეროში წარმატებით ასპარეზობს. ძირითადი საქმიანობა გახლავთ სამშენებლო პროექტების ბრენდირება, მარკეტინგი და გაყიდვების მართვა. \r\nჩვენ კომპანიებს ვთავაზობთ მომსახურების სრულ პაკეტს პროდუქტის შეფუთვიდან ნასყიდობის ხელშეკრულების გაფორმებამდე.', 'Georgia, Batum', 'Monday', 'Saturday', '2022-01-21 07:02:44', '2022-04-20 13:55:49'),
+(26, 11, 'en', 'We are a team of professionals', 'Georgian Sales Group', 'Which competes successfully in the field of construction development.  The main activities are branding of construction projects, marketing and sales management.  We offer companies a full range of services from product packaging to the conclusion of the purchase agreement.', 'Georgia, Batum', 'Monday', 'Saturday', '2022-01-21 07:02:44', '2022-05-11 01:28:29'),
 (27, 11, 'ka', 'ჩვენ ვართ პროფესიონალთა გუნდი', 'Georgian Sales Group', 'რომელიც სამშენებლო დეველოპერულ სფეროში წარმატებით ასპარეზობს. ძირითადი საქმიანობა გახლავთ სამშენებლო პროექტების ბრენდირება, მარკეტინგი და გაყიდვების მართვა. \r\nჩვენ კომპანიებს ვთავაზობთ მომსახურების სრულ პაკეტს პროდუქტის შეფუთვიდან ნასყიდობის ხელშეკრულების გაფორმებამდე.', 'საქართველო, ბათუმი', 'ორშაბათი', 'შაბათი', '2022-01-21 07:02:44', '2022-04-20 13:55:49'),
-(28, 11, 'ru', 'ჩვენ ვართ პროფესიონალთა გუნდი', 'Georgian Sales Group', 'რომელიც სამშენებლო დეველოპერულ სფეროში წარმატებით ასპარეზობს. ძირითადი საქმიანობა გახლავთ სამშენებლო პროექტების ბრენდირება, მარკეტინგი და გაყიდვების მართვა. \r\nჩვენ კომპანიებს ვთავაზობთ მომსახურების სრულ პაკეტს პროდუქტის შეფუთვიდან ნასყიდობის ხელშეკრულების გაფორმებამდე.', 'Georgia, Batum', 'Monday', 'Saturday', '2022-01-21 07:02:44', '2022-04-20 13:55:49');
+(28, 11, 'ru', 'Наша компания представляет собой комаду профессионалов', 'Georgian Sales Group', 'Которая успешно соревнуется за первенство в девелоперо - стрительной сфере. Нашей основной деятельностью является брендирование, маркетинг и управление продажами.Мы представляем полнвй пакет услуг для компаний начиная с оформления договора заканчивая упаковкой продукта', 'Georgia, Batum', 'Monday', 'Saturday', '2022-01-21 07:02:44', '2022-05-11 01:28:29');
 
 -- --------------------------------------------------------
 
@@ -1314,7 +1305,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Davit Gakhokia', 'd.gakhokia@cofi.ge', NULL, '$2y$10$/Pkd0L6F/Zd2J1o6JzGAPORwWqETMmyZHMhHMq4AAG49rQElBL0rK', NULL, '2021-12-26 04:12:05', '2022-04-15 08:26:01');
+(1, 'Davit Gakhokia', 'd.gakhokia@cofi.ge', NULL, '$2y$10$/Pkd0L6F/Zd2J1o6JzGAPORwWqETMmyZHMhHMq4AAG49rQElBL0rK', NULL, '2021-12-26 04:12:05', '2022-04-15 08:26:01'),
+(7, 'demo user', 'demo@cofi.ge', NULL, '$2y$10$Uq1zN.VLe6HwGprMXvVHOeqClQJQ7nyON.SyHybYL7yQmliChxALK', NULL, '2022-05-11 01:32:25', '2022-05-11 01:32:25');
 
 -- --------------------------------------------------------
 
@@ -1336,11 +1328,9 @@ CREATE TABLE `visions` (
 --
 
 INSERT INTO `visions` (`id`, `image`, `icon`, `status`, `created_at`, `updated_at`) VALUES
-(4, NULL, NULL, 1, '2022-04-20 07:02:14', '2022-04-20 07:02:14'),
-(5, NULL, NULL, 1, '2022-04-20 07:02:40', '2022-04-20 07:02:40'),
-(6, NULL, NULL, 1, '2022-04-20 07:03:06', '2022-04-20 07:03:06'),
-(7, NULL, NULL, 1, '2022-04-20 07:03:33', '2022-04-20 07:03:33'),
-(8, NULL, NULL, 1, '2022-04-20 07:04:00', '2022-04-20 07:10:07');
+(9, NULL, NULL, 1, '2022-05-11 01:25:00', '2022-05-11 01:25:00'),
+(10, NULL, NULL, 1, '2022-05-11 01:25:42', '2022-05-11 01:25:42'),
+(11, NULL, NULL, 1, '2022-05-11 01:26:12', '2022-05-11 01:26:12');
 
 -- --------------------------------------------------------
 
@@ -1363,21 +1353,15 @@ CREATE TABLE `vision_translations` (
 --
 
 INSERT INTO `vision_translations` (`id`, `vision_id`, `locale`, `title`, `description`, `created_at`, `updated_at`) VALUES
-(10, 4, 'en', '01.', 'გამჭირვალობა', '2022-04-20 07:02:14', '2022-04-20 07:02:14'),
-(11, 4, 'ka', '01.', 'გამჭირვალობა', '2022-04-20 07:02:14', '2022-04-20 07:02:14'),
-(12, 4, 'ru', '01.', 'გამჭირვალობა', '2022-04-20 07:02:14', '2022-04-20 07:02:14'),
-(13, 5, 'en', '02.', 'საიმედოობა', '2022-04-20 07:02:40', '2022-04-20 07:02:40'),
-(14, 5, 'ka', '02.', 'საიმედოობა', '2022-04-20 07:02:40', '2022-04-20 07:02:40'),
-(15, 5, 'ru', '02.', 'საიმედოობა', '2022-04-20 07:02:40', '2022-04-20 07:02:40'),
-(16, 6, 'en', '03.', 'ორგანიზებულობა', '2022-04-20 07:03:06', '2022-04-20 07:03:06'),
-(17, 6, 'ka', '03.', 'ორგანიზებულობა', '2022-04-20 07:03:06', '2022-04-20 07:03:06'),
-(18, 6, 'ru', '03.', 'ორგანიზებულობა', '2022-04-20 07:03:06', '2022-04-20 07:03:06'),
-(19, 7, 'en', '04.', '11 წლიანი გამოცდილება', '2022-04-20 07:03:33', '2022-04-20 07:03:33'),
-(20, 7, 'ka', '04.', '11 წლიანი გამოცდილება', '2022-04-20 07:03:33', '2022-04-20 07:03:33'),
-(21, 7, 'ru', '04.', '11 წლიანი გამოცდილება', '2022-04-20 07:03:33', '2022-04-20 07:03:33'),
-(22, 8, 'en', '05.', 'ინოვაციურობა', '2022-04-20 07:04:00', '2022-04-20 07:04:00'),
-(23, 8, 'ka', '05.', 'ინოვაციურობა', '2022-04-20 07:04:00', '2022-04-20 07:04:00'),
-(24, 8, 'ru', '05.', 'ინოვაციურობა', '2022-04-20 07:04:00', '2022-04-20 07:04:00');
+(25, 9, 'en', '01.', '11 years of experience', '2022-05-11 01:25:00', '2022-05-11 01:25:00'),
+(26, 9, 'ka', '01.', '11 წლიანი გამოცდილება', '2022-05-11 01:25:00', '2022-05-11 01:25:00'),
+(27, 9, 'ru', '01.', '11 - Летний стаж', '2022-05-11 01:25:00', '2022-05-11 01:25:00'),
+(28, 10, 'en', '02.', 'Discuss the project in details with various field', '2022-05-11 01:25:42', '2022-05-11 01:25:42'),
+(29, 10, 'ka', '02.', 'კომპლექსური მიდგომა', '2022-05-11 01:25:42', '2022-05-11 01:25:42'),
+(30, 10, 'ru', '02.', 'Комплексный подход', '2022-05-11 01:25:42', '2022-05-11 01:25:42'),
+(31, 11, 'en', '03.', 'Organized team', '2022-05-11 01:26:12', '2022-05-11 01:26:12'),
+(32, 11, 'ka', '03.', 'ორგანიზებულობა', '2022-05-11 01:26:12', '2022-05-11 01:26:12'),
+(33, 11, 'ru', '03.', 'Организация', '2022-05-11 01:26:12', '2022-05-11 01:26:12');
 
 --
 -- Indexes for dumped tables
@@ -1761,13 +1745,13 @@ ALTER TABLE `employee_translations`
 -- AUTO_INCREMENT for table `exclusives`
 --
 ALTER TABLE `exclusives`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `exclusive_translations`
 --
 ALTER TABLE `exclusive_translations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1953,19 +1937,19 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `visions`
 --
 ALTER TABLE `visions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `vision_translations`
 --
 ALTER TABLE `vision_translations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- Constraints for dumped tables

@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 
+
 use App\Models\Message;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,7 +28,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
 
         // View::share('key', 'value');
 

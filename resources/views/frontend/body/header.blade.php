@@ -33,10 +33,13 @@
 
                                             <li id="lang">
                                                 <a href="?language=ka">
-                                                    <p style="font-size: 17px;">{{ __('GEO') }} |</p>
+                                                    <p style="font-size: 17px;">GEO |</p>
                                                 </a>
                                                 <a href="?language=en">
-                                                    <p style="font-size: 17px;"> {{ __('ENG') }}</p>
+                                                    <p style="font-size: 17px;">ENG |</p>
+                                                </a>
+                                                <a href="?language=ru">
+                                                    <p style="font-size: 17px;">RUS</p>
                                                 </a>
                                             </li>
 

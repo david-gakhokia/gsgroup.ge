@@ -207,7 +207,7 @@
                                         <div class="scrolla-element-anim-1 scroll-animate" data-animate="active">
                                             <div class="image">
                                                 @if ($item->image)
-                                                    <img src="{{ asset('uploads/projects/' . $item->image) }}"
+                                                    <img src="{{ asset('uploads/exclusives/' . $item->image) }}"
                                                         alt="">
                                                 @else
                                                     <img

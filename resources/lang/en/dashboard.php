@@ -2,6 +2,7 @@
 
 return array (
   'API' => 'API',
+  'About Us' => 'About Us',
   'Accepted' => 'Accepted',
   'Action' => 'Action',
   'Active' => 'Active',
@@ -74,6 +75,7 @@ return array (
   'Posts' => 'Posts',
   'Price' => 'Price',
   'Print' => 'Print',
+  'Privacy Policy' => 'Privacy Policy',
   'Products' => 'Products',
   'Profile' => 'Profile',
   'Projects' => 'Projects',

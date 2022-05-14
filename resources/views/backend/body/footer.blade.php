@@ -4,6 +4,6 @@
             {{__('Created By')}} <a href="https://diem.ge" target="_blank">DMG</a><sup>®</sup>
         </div>
         <div class="footer-right">
-            V&nbsp;<a href="https://kerdzebi.ge" target="_blank">0.1</a><sup>Beta®</sup>
+           CMS &nbsp;<a href="https://cofi.ge" target="_blank">v 0.5</a><sup>Beta®</sup>
         </div>
     </footer>

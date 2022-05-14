@@ -21,7 +21,7 @@
     "Address": "მისამართი",
     "View": "ნახვა",
     "Product not Found": "პროდუქცია ვერ მოიძებნა",
-    "Name": "დასახელება",
+    "Name": "სახელი",
     "Image": "ფოტო",
     "Price": "ფასი",
     "Quantity": "რაოდენობა",
@@ -40,12 +40,12 @@
     "Our Pricing": "ჩვენი ფასები",
     "See All Prices": "იხილეთ ყველა ფასი",
     "E-mail": "ელ.ფოსტა",
-    "Phone": "ტელეფონი",
+    "Phone": "ტელ :",
     "Subject": "სათაური",
     "Select a department": "შეარჩიეთ დეპარტამენტი",
     "Customer Support": "ტექნიკური დახმარება",
     "Sales": "გაყიდვები",
-    "Message": "შეტყობინება",
+    "Message": "წერილი",
     "Send message": "შეტყობინების გაგზავნა",
     "Contact form": "საკონტაქტო ფორმა",
     "Details": "დეტალები",
@@ -71,5 +71,5 @@
     "Why GSG": "რატომ GSG",
     "exclusives": "ექსკლუზივები",
     "Contact Us": "კონტაქტი",
-    "Send a Message": "შეტყობინების გაგზავნა"
+    "Send a Message": "წერილის გაგზავნა"
 }

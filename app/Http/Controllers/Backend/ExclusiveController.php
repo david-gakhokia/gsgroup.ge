@@ -99,7 +99,7 @@ class ExclusiveController extends Controller
 
     public function destroy($id)
     {
-        Project::find($id)->delete();
+        Exclusive::find($id)->delete();
 
         return redirect()->route('exclusives.index')->withSuccessMessage(__('alerts.Record has been deleted'));
     }

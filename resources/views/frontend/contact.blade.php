@@ -85,7 +85,7 @@
                                 <div class="icon">
                                     <i aria-hidden="true" class="fas fa-phone-alt"></i>
                                 </div>
-                                <div class="name">{{ __('Phone') }}:</div>
+                                <div class="name">{{ __('Phone') }}</div>
                                 <div class="text">{{ $setting->phone }}</div>
                             </div>
                         </div>

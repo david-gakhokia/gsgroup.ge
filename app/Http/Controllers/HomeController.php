@@ -27,10 +27,19 @@ class HomeController extends Controller
 
     public function index()
     {
-        $clients = Client::translatedIn(app()->getLocale())->get();
-        $visions = Vision::translatedIn(app()->getLocale())->get();
-        $projects = Project::translatedIn(app()->getLocale())->get();
-        $exclusives = Exclusive::translatedIn(app()->getLocale())->get();
+        $clients = Client::translatedIn(app()->getLocale())
+        ->where('status', 1)
+        ->get();
+        $visions = Vision::translatedIn(app()->getLocale())
+        ->where('status', 1)
+        ->get();
+        $projects = Project::translatedIn(app()->getLocale())
+        ->where('status', 1)
+        ->get();
+
+        $exclusives = Exclusive::translatedIn(app()->getLocale())
+        ->where('status', 1)
+        ->get();
 
         $services = Service::translatedIn(app()->getLocale())
             ->take(10)
