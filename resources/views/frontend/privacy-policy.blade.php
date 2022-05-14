@@ -26,12 +26,12 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 align-left col-lg-12">
 						<div class="m-titles">
-							<div class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">Introduction</div>
+							<div class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">{{ $privacy_policy->title }}</div>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="description-text scrolla-element-anim-1 scroll-animate" data-animate="active">
-							<p>It is not enough that we build products that function, that are understandable and usable, we also need to build products that bring joy and excitement, pleasure and fun, and, yes, beauty to people’s lives. Creativity is to discover a question that has never been asked. If one brings up an idiosyncratic question, the answer he gives will necessarily be unique as well.</p>
+							<p>{!! $privacy_policy->description !!}</p>
 						</div>
 					</div>
 				</div>

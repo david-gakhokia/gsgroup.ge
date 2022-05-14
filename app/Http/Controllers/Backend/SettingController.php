@@ -15,6 +15,12 @@ class SettingController extends Controller
     //     $this->middleware('auth');
     // }
 
+    public function myform()
+    {
+
+        return view('backend.myform');
+    }
+
     public function general()
     {
         $setting = Setting::translatedIn(app()->getLocale())

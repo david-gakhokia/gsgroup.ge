@@ -42,6 +42,7 @@ return array (
   'Icon' => 'ხატულა',
   'Image' => 'ფოტო',
   'Incoming Messages' => 'შემომავალი შეტყობინებები',
+  'Investment projects' => 'საინვესტიციო პროექტები',
   'Languages' => 'ენები',
   'Last Used' => 'ბოლოს გამოიყენა',
   'Link' => 'ლინკი',

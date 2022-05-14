@@ -44,6 +44,7 @@ return array (
   'Icon' => 'Icon',
   'Image' => 'Image',
   'Incoming Messages' => 'Incoming Messages',
+  'Investment projects' => 'Investment Projects',
   'Languages' => 'Languages',
   'Last Used' => 'Last Used',
   'Link' => 'Link',

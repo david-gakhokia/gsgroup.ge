@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('dashboard.investments'))
+@section('title', __('dashboard.Investment projects'))
 
 @section('content')
 
@@ -12,7 +12,7 @@
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>@lang('dashboard.investments')</h4>
+                    <h4>@lang('dashboard.Investment projects')</h4>
                     <h4 class="nav-item ml-auto">
                       <a href="{{ route ('investments.create')  }}" class="btn btn-icon icon-left btn-success rounded-pill">
                           <i class="fas fa-plus"></i> @lang('dashboard.Add')</a>

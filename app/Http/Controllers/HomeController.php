@@ -9,6 +9,7 @@ use App\Models\Exclusive;
 use App\Models\Live;
 use App\Models\Order;
 use App\Models\Post;
+use App\Models\PrivacyPolicy;
 use App\Models\Product;
 use App\Models\Project;
 use App\Models\Reservation;
@@ -45,7 +46,9 @@ class HomeController extends Controller
             ->take(10)
             ->get();
 
-        return view('frontend.home', compact(['clients','services','visions','projects', 'exclusives']));
+
+
+        return view('frontend.home', compact(['clients','services','visions','projects', 'exclusives', 'privacy_policy']));
     }
 
 
@@ -84,7 +87,11 @@ class HomeController extends Controller
 
     public function privacy_policy()
     {
-        return view('frontend.privacy-policy');
+
+        $privacy_policy = PrivacyPolicy::translatedIn(app()->getLocale())
+            ->first();
+
+        return view('frontend.privacy-policy',compact('privacy_policy'));
     }
 
 

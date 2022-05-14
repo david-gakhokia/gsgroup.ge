@@ -23,6 +23,7 @@ use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\VisionController;
 use App\Http\Controllers\Backend\NetworkController;
 use App\Http\Controllers\Backend\ExclusiveController;
+use App\Http\Controllers\Backend\InvestmentController;
 use App\Http\Controllers\Backend\PrivacyPolicyController;
 
 
@@ -60,12 +61,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::resource('employees', EmployeeController::class);
     Route::resource('services', ServiceController::class);
     Route::resource('projects', ProjectController::class);
+    Route::resource('investments', InvestmentController::class);
 
     Route::resource('exclusives', ExclusiveController::class);
 
     Route::resource('visions', VisionController::class);
-
-
 
     Route::resource('reservations', ReservationController::class);
     Route::resource('contacts', ContactController::class);
@@ -82,6 +82,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
         // General
         Route::get('general', [SettingController::class, 'general'])->name('setting.general');
         Route::post('general', [SettingController::class, 'store'])->name('setting.store');
+
+
+        Route::get('myform', [SettingController::class, 'myform'])->name('setting.myform');
 
 
         // Networks
