@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Client;
 use App\Models\Employee;
 use App\Models\Exclusive;
+use App\Models\Investment;
 use App\Models\Live;
 use App\Models\Order;
 use App\Models\Post;
@@ -46,9 +47,11 @@ class HomeController extends Controller
             ->take(10)
             ->get();
 
+        $investments = Investment::translatedIn(app()->getLocale())
+            ->take(10)
+            ->get();
 
-
-        return view('frontend.home', compact(['clients','services','visions','projects', 'exclusives', 'privacy_policy']));
+        return view('frontend.home', compact(['clients','services','visions','projects', 'exclusives', 'investments']));
     }
 
 

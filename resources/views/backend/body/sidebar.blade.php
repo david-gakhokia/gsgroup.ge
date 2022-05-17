@@ -79,6 +79,8 @@
             </li>
             @endcan
 
+
+
             @can('vision-list')
             <li class="dropdown">
               <a href="{{ route('visions.index') }}" class="nav-link"><i data-feather="check-square"></i><span>@lang('dashboard.Visions')</span></a>
@@ -97,15 +99,11 @@
             </li>
             @endcan
 
-
-
-
-            {{-- @can('contact-list')
+            @can('service-list')
             <li class="dropdown">
-              <a href="{{ route('contacts.index') }}" class="nav-link"><i data-feather="map-pin"></i><span>@lang('dashboard.Contacts')</span></a>
+              <a href="{{ route('investments.index') }}" class="nav-link"><i data-feather="bookmark"></i><span>@lang('dashboard.Investment projects')</span></a>
             </li>
-            @endcan --}}
-
+            @endcan
 
             <li class="menu-header"><hr></li>
 

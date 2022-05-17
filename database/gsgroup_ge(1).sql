@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2022 at 11:14 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.24
+-- Generation Time: May 15, 2022 at 08:32 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -286,6 +286,38 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `investments`
+--
+
+CREATE TABLE `investments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `icon` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `investment_translations`
+--
+
+CREATE TABLE `investment_translations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `investment_id` bigint(20) UNSIGNED NOT NULL,
+  `locale` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `languages`
 --
 
@@ -456,7 +488,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (50, '2022_04_19_170220_create_exclusives_table', 16),
 (51, '2022_04_19_170239_create_exclusive_translations_table', 16),
 (52, '2022_05_10_114949_create_privacy_policies_table', 17),
-(53, '2022_05_10_115911_create_privacy_policy_translations_table', 17);
+(53, '2022_05_10_115911_create_privacy_policy_translations_table', 17),
+(54, '2022_05_14_191217_create_investments_table', 18),
+(55, '2022_05_14_191357_create_investment_translations_table', 18);
 
 -- --------------------------------------------------------
 
@@ -737,16 +771,6 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(9, '20220320124758.jpg', 1, '2022-03-20 08:47:58', '2022-03-20 08:47:58'),
-(10, '20220320130633.jpg', 1, '2022-03-20 09:06:33', '2022-03-20 09:06:33'),
-(11, '20220320131149.jpg', 1, '2022-03-20 09:11:49', '2022-03-20 09:11:49'),
-(12, '20220320131425.jpg', 1, '2022-03-20 09:14:25', '2022-03-20 09:14:25');
-
 -- --------------------------------------------------------
 
 --
@@ -762,24 +786,6 @@ CREATE TABLE `post_translations` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `post_translations`
---
-
-INSERT INTO `post_translations` (`id`, `post_id`, `locale`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(19, 9, 'en', 'The tourist season in Batumi is officially open!', 'On June 15, the opening of the tourist season was officially announced! In connection with this event, the Department of Tourism of Adjara prepared an official ceremony that impressed all spectators and filled with optimism for the coming hot months of summer.', '2022-03-20 08:47:58', '2022-03-20 08:47:58'),
-(20, 9, 'ka', 'ბათუმში ტურისტული სეზონი ოფიციალურად გაიხსნა!', '15 ივნისს ოფიციალურად გამოცხადდა ტურისტული სეზონის გახსნა! ამ მოვლენასთან დაკავშირებით, აჭარის ტურიზმის დეპარტამენტმა მოამზადა ოფიციალური ცერემონია, რომელმაც შთაბეჭდილება მოახდინა ყველა მაყურებელზე და შეავსო ისინი ოპტიმიზმით მომავალი ზაფხულის ცხელ თვეებში.', '2022-03-20 08:47:58', '2022-03-20 08:47:58'),
-(21, 9, 'ru', 'Туристический сезон в Батуми официально открыт!', '15 июня было официально объявлено об открытии туристического сезона! В связи с этим событием Департамент Туризма Аджарии подготовил официальную церемонию, которая впечатлила всех зрителей и наполнила оптимизмом на предстоящие жаркие месяцы лета.', '2022-03-20 08:47:58', '2022-03-20 08:47:58'),
-(22, 10, 'en', 'Wyndham Residence Batumi exhibition at the Galleria mall in Tbilisi', 'Next Group took part in the Moscow International Property Show - the first professional exhibition of foreign real estate in Russia. Its organizer is invariably the company aiGroup. The concept of the exhibition, specializing only in the foreign market, was first implemented in 2003.', '2022-03-20 09:06:33', '2022-03-20 09:06:33'),
-(23, 10, 'ka', 'დაიწყო ახალი კომპლექსის მშენებლობა', 'ახალი პროექტი NEXT GROUP– ისგან - 5 ვარსკვლავიანი სასტუმრო კომპლექსი აჭარის საუკეთესო ტურისტულ ადგილას - გონიო, ადგილი, სადაც მწვანე ბორცვები ერწყმის ზღვის ზედაპირს ყველაზე სუფთა წყალთან რეგიონის მთელ სანაპიროზე.\r\n25-სართულიანი კომპლექსი აერთიანებს 5 ვარსკვლავიან ამერიკულ Wyndham Garden სასტუმროს და Wyndham Residences ბრენდირებულ რეზიდენციებს, რომლებსაც სრულად მოემსახურება Wyndham სასტუმროს ბრენდი.\r\nშეიტყვეთ მეტი ჩვენი ახალი პროექტის შესახებ - დაგვიკავშირდით ან დატოვეთ თქვენი საკონტაქტო ინფორმაცია \"კონტაქტების\" განყოფილებაში.', '2022-03-20 09:06:33', '2022-03-20 09:06:33'),
-(24, 10, 'ru', 'Выставка Wyndham Residence Batumi в Galleria в Тбилиси', 'Продолжаются мероприятия, посвящённые компании.', '2022-03-20 09:06:33', '2022-03-20 09:06:33'),
-(25, 11, 'en', 'Signed a contract with Wyndham Hotels', '..', '2022-03-20 09:11:49', '2022-03-20 09:11:49'),
-(26, 11, 'ka', 'შეთანხმება Wyndham Hotels– თან', '..', '2022-03-20 09:11:49', '2022-03-20 09:11:49'),
-(27, 11, 'ru', 'Signed a contract with Wyndham Hotels', '..', '2022-03-20 09:11:49', '2022-03-20 09:11:49'),
-(28, 12, 'en', 'We opened offices in Moscow and Warsaw', '..', '2022-03-20 09:14:25', '2022-03-20 09:14:25'),
-(29, 12, 'ka', 'We opened offices in Moscow and Warsaw', '..', '2022-03-20 09:14:25', '2022-03-20 09:14:25'),
-(30, 12, 'ru', 'Мы открыли офисы в Москве и Варшаве', '..', '2022-03-20 09:14:25', '2022-03-20 09:14:25');
 
 -- --------------------------------------------------------
 
@@ -1445,6 +1451,20 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `investments`
+--
+ALTER TABLE `investments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `investment_translations`
+--
+ALTER TABLE `investment_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `investment_translations_investment_id_locale_unique` (`investment_id`,`locale`),
+  ADD KEY `investment_translations_locale_index` (`locale`);
+
+--
 -- Indexes for table `languages`
 --
 ALTER TABLE `languages`
@@ -1760,6 +1780,18 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `investments`
+--
+ALTER TABLE `investments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `investment_translations`
+--
+ALTER TABLE `investment_translations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `languages`
 --
 ALTER TABLE `languages`
@@ -1793,7 +1825,7 @@ ALTER TABLE `message_translations`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `networks`
@@ -1984,6 +2016,12 @@ ALTER TABLE `employee_translations`
 --
 ALTER TABLE `exclusive_translations`
   ADD CONSTRAINT `exclusive_translations_exclusive_id_foreign` FOREIGN KEY (`exclusive_id`) REFERENCES `exclusives` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `investment_translations`
+--
+ALTER TABLE `investment_translations`
+  ADD CONSTRAINT `investment_translations_investment_id_foreign` FOREIGN KEY (`investment_id`) REFERENCES `investments` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `live_translations`

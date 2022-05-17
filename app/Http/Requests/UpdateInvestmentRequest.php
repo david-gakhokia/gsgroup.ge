@@ -13,7 +13,7 @@ class UpdateInvestmentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,21 @@ class UpdateInvestmentRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        $rules = [
+            'ka.title' => 'required',
+            'ka.name' => '',
+            'ka.description' => '',
+            'icon' => '',
+            'image' => '|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'status' => 'required',
         ];
+
+        foreach (config('translatable.locales') as $locale) {
+            $rules[$locale . '.title'] = 'string';
+            $rules[$locale . '.name'] = 'string';
+            $rules[$locale . '.description'] = 'string';
+        }
+
+        return $rules;
     }
 }

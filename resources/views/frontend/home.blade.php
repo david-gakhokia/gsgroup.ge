@@ -138,24 +138,21 @@
 
 
             <!-- Section Services -->
-            <div class="section section-inner m-team">
+            <div class="section section-inner m-testimonials">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 align-left col-lg-12">
-
-                            <!-- titles -->
                             <div class="m-titles">
-                                <h2 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-                                    @lang('Our Projects')</h2>
+                                <h2 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">{{ __('Our Projects') }}</h2>
                             </div>
-
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="team-items row">
-                                @foreach ($projects as $item)
-                                    <div class="team-col col-xs-12 col-sm-12 col-md-6 col-lg-4">
-                                        <div class="team-item scrolla-element-anim-1 scroll-animate"
-                                            data-animate="active">
+                            <!-- Carousel -->
+                            <div class="swiper-container js-testimonials">
+                                <div class="swiper-wrapper">
+                                    @foreach ($projects as $item)
+                                    <div class="team-item swiper-slide">
+                                        <div class="scrolla-element-anim-1 scroll-animate" data-animate="active">
                                             <div class="image">
                                                 <a href="{{ url('project/'.$item->id) }}">
                                                     <div class="img">
@@ -171,18 +168,23 @@
                                             </div>
                                             <div class="desc">
                                                 <a href="{{ url('project/'.$item->id) }}">
-                                                    <div class="name">{{ $item->name }}</div>
+                                                    <div class="name">{{ $item->title }}</div>
                                                 </a>
                                             </div>
+
                                         </div>
                                     </div>
-                                @endforeach
+                                    @endforeach
+                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
+                            <!-- /Carousel -->
                         </div>
                     </div>
                 </div>
             </div>
             <!--// Section Services -->
+
 		    <!-- Section exclusives -->
             <div class="section section-inner m-testimonials">
                 <div class="container">
@@ -217,7 +219,6 @@
                                             <div class="desc">
                                                 <div class="title">{{ $item->name }}</div>
                                                 <div class="name">{{ $item->title }}</div>
-                                                <div class="text">{{ $item->description }}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -238,6 +239,50 @@
             <!--// Section exclusives -->
 
 
+		    <!-- Section investments -->
+            <div class="section section-inner m-testimonials">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 align-left col-lg-12">
+                            <div class="m-titles">
+                                <h2 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">{{ __('Investments') }}</h2>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <!-- Carousel -->
+                            <div class="swiper-container js-testimonials">
+                                <div class="swiper-wrapper">
+                                    @foreach ($investments as $item)
+                                    <div class="team-item swiper-slide">
+                                        <div class="scrolla-element-anim-1 scroll-animate" data-animate="active">
+
+                                            <div class="image">
+                                                <div class="img">
+                                                    @if ($item->image)
+                                                        <img src="{{ asset('uploads/investments/' . $item->image) }}"
+                                                            alt="">
+                                                    @else
+                                                        <img
+                                                            src="https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg" />
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="desc">
+                                                <div class="name">{{ $item->title }}</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <!-- /Carousel -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// Section investments -->
 
             <!-- Section Clients -->
             <div class="section section-inner m-partners">

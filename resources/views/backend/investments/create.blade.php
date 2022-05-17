@@ -38,7 +38,7 @@
                   </ul>
                   <div class="tab-content bg-transparent">
                     <div id="note-full-container" class="note-has-grid row">
-                        <form action="{{ route('projects.store') }}" class="needs-validation" novalidate="" method="POST"  enctype="multipart/form-data" >
+                        <form action="{{ route('investments.store') }}" class="needs-validation" novalidate="" method="POST"  enctype="multipart/form-data" >
                             @csrf
                             <div class="card-body">
                                 <div class="form-row">

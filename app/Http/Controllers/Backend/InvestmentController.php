@@ -57,7 +57,7 @@ class InvestmentController extends Controller
         $investment = Investment::translatedIn(app()->getLocale())
             ->findOrFail($id);
 
-        return view('backend.investments.edit');
+        return view('backend.investments.edit', compact('investment'));
     }
 
     public function update(UpdateInvestmentRequest $request, $id)
